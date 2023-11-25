@@ -1,7 +1,6 @@
 from tuote import Tuote
 from kirjanpito import kirjanpito as default_kirjanpito
 
-
 class Varasto:
     def __init__(self, kirjanpito=default_kirjanpito):
         self._kirjanpito = kirjanpito
