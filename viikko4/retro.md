@@ -1,0 +1,5 @@
+Retrospektiivi on tapaaminen ryhmän jäsenien kesken, usein sprintin lopuksi, jossa keskustellaan, mikä ryhmän työskentelyprosessissa sprintin aikana oli hyvää ja toimivaa, missä asioissa ryhmä voisi vielä kehittyä, sekä mitä tapoja pitäisi ottaa käyttöön seuraavassa sprintissä. Retrospektiivin päätavoitteena on parantaa tiimin tehokkuustasoa. Kokouksen pitämiseen on kehitetty useita eri tapoja, joista tutustutaan nyt kahteen.
+
+Eräs tekniikka retrospektiivin pitämiseen on "Start, Stop, Continue, More of, Less of Wheel". Tässä tekniikassa käytetään 5 kategorian pyörää. Ideana on saada ryhmän jäsenet keskustelemaan työskentelytavoista, joita ryhmän pitäisi aloittaa (Start), lopettaa (Stop), jatkaa (Continue), lisätä (More of) ja vähentää (Less of). Suhteellisen lyhyt kokous, 10-25 minuuttia.
+
+Toinen tekniikka on yksinkertainen "Glad, Sad, Mad", jossa tutkiskellaan, mitkä asiat ryhmän työskentelyprosessissa saavat tuntemaan itsensä iloiseksi (glad), surulliseksi (sad) ja vihaiseksi (mad), jotka sitten lajitellaan kyseisiin kategorioihin. Pidempi kokoustyyppi, noin 60 minuuttia. 
