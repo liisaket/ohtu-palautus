@@ -12,25 +12,35 @@ class Summa:
     def __init__(self, sovellus, lue_syote):
         self._sovellus = sovellus
         self._lue_syote = lue_syote
+        self._arvo = 0
     
     def suorita(self):
         try:
-            arvo = int(self._lue_syote())
-            self._sovellus.plus(arvo)
+            self._arvo = int(self._lue_syote())
+            self._sovellus.plus(self._arvo)
         except Exception:
             pass
+    
+    def kumoa(self, arvo):
+        self._sovellus.miinus(self._arvo)
+        arvo.set(self._sovellus.arvo())
 
 class Erotus:
     def __init__(self, sovellus, lue_syote):
         self._sovellus = sovellus
         self._lue_syote = lue_syote
+        self._arvo = 0
     
     def suorita(self):
         try:
-            arvo = int(self._lue_syote())
-            self._sovellus.miinus(arvo)
+            self._arvo = int(self._lue_syote())
+            self._sovellus.miinus(self._arvo)
         except Exception:
             pass
+    
+    def kumoa(self, arvo):
+        self._sovellus.plus(self._arvo)
+        arvo.set(self._sovellus.arvo())
 
 class Nollaus:
     def __init__(self, sovellus):
@@ -49,7 +59,6 @@ class Kayttoliittyma:
             Komento.SUMMA: Summa(sovelluslogiikka, self._lue_syote),
             Komento.EROTUS: Erotus(sovelluslogiikka, self._lue_syote),
             Komento.NOLLAUS: Nollaus(sovelluslogiikka),
-            #Komento.KUMOA: Kumoa(sovelluslogiikka, self._lue_syote) # ei ehkä tarvita täällä...
         }
 
     def kaynnista(self):
@@ -82,7 +91,7 @@ class Kayttoliittyma:
             master=self._root,
             text="Kumoa",
             state=constants.DISABLED,
-            command=lambda: self._suorita_komento(Komento.KUMOA)
+            command=lambda: None
         )
 
         tulos_teksti.grid(columnspan=4)
@@ -99,6 +108,7 @@ class Kayttoliittyma:
         komento_olio = self._komennot[komento]
         komento_olio.suorita()
         self._kumoa_painike["state"] = constants.NORMAL
+        self._kumoa_painike["command"] = lambda: komento_olio.kumoa(self._arvo_var)
 
         if self._sovelluslogiikka.arvo() == 0:
             self._nollaus_painike["state"] = constants.DISABLED
