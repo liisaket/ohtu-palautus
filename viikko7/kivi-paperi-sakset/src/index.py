@@ -1,6 +1,4 @@
-from kps_pelaaja_vs_pelaaja import KPSPelaajaVsPelaaja
-from kps_tekoaly import KPSTekoaly
-from kps_parempi_tekoaly import KPSParempiTekoaly
+from luo_peli import luo_peli
 
 def main():
     while True:
@@ -12,16 +10,10 @@ def main():
               )
 
         vastaus = input()
-
-        if vastaus == "a":
-            KPSPelaajaVsPelaaja()
-        elif vastaus == "b":
-            KPSTekoaly()
-        elif vastaus == "c":
-            KPSParempiTekoaly()
+        if vastaus in ["a", "b", "c"]:
+            luo_peli(vastaus)
         else:
             break
-
 
 if __name__ == "__main__":
     main()
