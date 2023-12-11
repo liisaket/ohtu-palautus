@@ -1,4 +1,4 @@
-from luo_peli import luo_peli
+from pelinluonti import luo_peli
 
 def main():
     while True:
